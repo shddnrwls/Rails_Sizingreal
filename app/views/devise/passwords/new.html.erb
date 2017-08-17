@@ -1,16 +1,29 @@
-<h2>Forgot your password?</h2>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-5">
+      <center>
+<h2>비밀번호 찾기</h2><br>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <div class="col-6">
+    <h6 style= "text-align: left">아이디</h6></div>
     <%= f.email_field :email, autofocus: true %>
-  </div>
-
+   </div>
+  <br>
   <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
+    <button type="submit" style="background-color:#23bab5;border:#23bab5"class="btn btn-warning btn1">비밀번호 재설정 메일보내기</button>
   </div>
 <% end %>
-
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
+<center>
 <%= render "devise/shared/links" %>
+</center>

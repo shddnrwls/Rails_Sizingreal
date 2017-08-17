@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Hanna';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.eot);
+  src: url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/hanna/v3/BM-HANNA.ttf) format('truetype');
+}
+
+.btn1 {
+  cursor: pointer;
+}
+
+/* --------------------navbar start-------------------*/
+
+.navbar-h {
+  font-weight: 100;
+}
+
+.navbarback {
+  border-bottom:1px solid #23bab5;
+
+}
+
+
+/* --------------------navbar end-------------------*/
+
+/* --------------------footer start-------------------*/
+
+* {
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+}
+html {
+height: 100%;
+}
+body {
+margin: 0;
+height: 100%;
+font-family: 'Hanna', serif;
+}
+.wrap {
+min-height: 100%;
+position: relative;
+padding-bottom: 19px; 
+}
+header {
+background-color: #EFEFEF;
+}
+section {
+background-color: #AFAFAF;
+}
+ol {
+margin: 0;
+}
+footer {
+position: static;
+bottom: 0;
+left: 0;
+right: 0;
+margin-top: 30px;
+margin-bottom: -30px;
+padding-top: 30px;
+border-top:1px solid #eaeaea;
+color: white;
+background-color: #f8f8f8;
+height: 100px;
+text-align: center;
+}
+
+.footer1 {
+  font-size: 13px;
+}
+
+.footer2 {
+  margin-top: -15px;
+  font-size: 11px;
+}
+
+
+/* --------------------footer start-------------------*/
+
+/* --------------------mypage start-------------------*/
+
+.box{
+
+  padding: 30px;
+}
+.pw{
+  margin: 10px 5px 10px 5px;
+  padding-left: 5px;
+  width:90%;
+}
+
+/* --------------------mypage end-------------------*/

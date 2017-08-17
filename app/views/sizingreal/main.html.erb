@@ -1,7 +1,51 @@
-<h1>메인 뷰 #root </h1>
-<p>Find me in app/views/sizingreal/main.html.erb</p>
-<p> <a href="/sizingreal/input"> 입력 뷰로 이동 </a></p>
+<div id="wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col-6"><br><br>
+            <img src="assets/size.png" style="width:100%;height:auto"></img><br>
+        
+<center>
+
+<%if user_signed_in?%>
+<div class="row">
+            <div class="col-6">
+                
+            </div>
+            <div class="col-6">
+            </div>
+        </div>
+
+</center><br><br>
+<center> <a href="/sizingreal/input">입력 뷰로 이동 </a></center>
+
+          </div>
+<%else%>
+        <div class="row">
+            <div class="col-6">
+                <button type="button" style="background-color:#23bab5;border:#23bab5"class="btn btn-warning btn1" onclick="location.href='https://sizing-real01-ukjin.c9users.io/users/sign_up'">회원가입</button>
+            </div>
+            <div class="col-6">
+                <button type="button" style="background-color:#23bab5;border:#23bab5"class="btn btn-warning btn1" onclick="location.href='https://sizing-real01-ukjin.c9users.io/users/sign_in'">로그인</button>
+            </div>
+        </div>
+
+</center><br><br>
+<center> <a href="/sizingreal/input">로그인 없이 입력 뷰로 이동 </a>(매번 사이즈 입력이 필요합니다ㅠ)</center>
+
+          </div>
+          <%end%>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- NAV 바에 있어서 주석 처리
 <%if user_signed_in?%>
 <p> <a href="/sizingreal/mypage/<%= current_user.id%>"> 내 정보 뷰로 이동 </a> </p>
 <a href="/users/sign_out">로그아웃</a>
 <%end%>
+-->
