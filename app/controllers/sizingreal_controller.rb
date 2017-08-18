@@ -102,6 +102,24 @@ class SizingrealController < ApplicationController
 
     @minus_waist1 = ((@hash_jean_size["waist"]).to_f - (@hash_my_size["m_waist"]).to_f) * 3.0
     @minus_waist2 = ((@hash_jean_size2["waist2"]).to_f - (@hash_my_size["m_waist"]).to_f) * 3.0
+  
+    @minus_tail1 = ((@hash_jean_size["tail"]).to_f - (@hash_my_size["m_tail"]).to_f) * 5.5
+    @minus_tail2 = ((@hash_jean_size2["tail2"]).to_f - (@hash_my_size["m_tail"]).to_f) * 5.5
+    
+    if (106 - @minus_waist1) < (106 - @minus_tail1)
+      @jean_ML1 = 106 - @minus_waist1
+    else
+      @jean_ML1 = 106 - @minus_tail1
+    end
+    
+    if (106 - @minus_waist2) < (106 - @minus_tail2)
+      @jean_ML2 = 106 - @minus_waist2
+    else
+      @jean_ML2 = 106 - @minus_tail2
+    end
+      
+    
+    
   end
 
   def mypage

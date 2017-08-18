@@ -43,7 +43,7 @@ function two(){
 
 @thigh = 3 * @diff_thigh
 
-@rise = 180 * @diff_length
+@rise = (180 * @diff_length)
 
 
 
@@ -64,7 +64,8 @@ function two(){
 
 @thigh2 = 3 * @diff_thigh2
 
-@rise2 = 180 * @diff_length2
+@rise2 = (180 * @diff_length2) - (40 * @diff_rise2)
+
 # 값이 오를 때 y 좌표가 올라감
 %>
 <!--
@@ -121,8 +122,8 @@ tail 밑단
     <img src="/assets/size_low.png" style="margin-top: 80px; margin-left: auto; margin-right: auto; display: block; position :relative"/>
     
 </div>
-
-    <div style="margin-top: -340px; margin-left :<%=106-@minus_waist1%>px;">
+<!-- <%=106-@minus_waist1%> -->
+    <div style="margin-top: -340px; margin-left :<%= @jean_ML1%>px;">
         <svg width="270" height="340" id="svg11" display="none" style="margin-left: auto; margin-right: auto; position :relative">
             <g>
                 <path stroke="black"
@@ -142,7 +143,7 @@ tail 밑단
         </div>
         
     
-    <div style="margin-top: -340px; margin-left :<%=106-@minus_waist2%>px;">
+    <div style="margin-top: -340px; margin-left :<%= @jean_ML2%>px;">
         <svg width="270" height="340" id="svg22" display="none" style="margin-left: auto; margin-right: auto; position :relative">
  <g>
   <path stroke="black"
