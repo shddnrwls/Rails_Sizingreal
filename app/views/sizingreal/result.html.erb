@@ -18,11 +18,11 @@
 <script language="javascript">
 function one(){
  document.getElementById("svg22").style.display='none';
- document.getElementById("svg11").style.display='inline';
+ document.getElementById("svg11").style.display='block';
 }
 function two(){
  document.getElementById("svg11").style.display='none';
- document.getElementById("svg22").style.display='inline';
+ document.getElementById("svg22").style.display='block';
 }
 
 </script>
@@ -37,7 +37,7 @@ function two(){
 @length = 217 * @diff_length
 
 @waist_height = 72 * @diff_length
-@waist_width = 30 * @diff_waist
+@waist_width = 32 * @diff_waist
 
 @tail = 45 * @diff_tail
 
@@ -58,7 +58,7 @@ function two(){
 @length2 = 217 * @diff_length2
 
 @waist_height2 = 72 * @diff_length2
-@waist_width2 = 30 * @diff_waist2
+@waist_width2 = 32 * @diff_waist2
 
 @tail2 = 45 * @diff_tail2
 
@@ -82,16 +82,9 @@ tail 밑단
 -->
 
 <style>
-  .back_img
-  {
-    position: relative;
-  }
 
   .svg_pants
   {
-    position: relative;
-    margin-top: 0px;
-    margin-left: 203px;
   }
   *{
       font-family:hanna;
@@ -123,34 +116,34 @@ tail 밑단
 
   </center>
 <br><hr>
-<center>
-<div class="back_img" style="position:absolute">
-    <div style="position:relative">
-<img src="/assets/size_low.png" style="margin-left:6px"></div>
-</div></center>
 
-<center><div style="position:absolute"><div style="position:relative;">
-<svg width="547" height="349" class="svg_pants" id="svg11" display="none">
- <g>
-  <path stroke="black"
-    d="m<%=@StartXpos%>,
-    <%=@StartYpos%>l<%=@Heap_left%>,
-    <%=@waist_height%>l<%=@thigh%>,
-    <%=@length%>l<%=@tail%>,
-    0l<%=@waist_width%>,
-    -<%=@rise%>l<%=@waist_width%>,
-    <%=@rise%>l<%=@tail%>,
-    0l<%=@thigh%>,
-    -<%=@length%>l-<%=@StartXpos%>,
-    -<%=@waist_height%>"
-    stroke-width="3" fill="yellow"/>
- </g>
-</svg></div></center>
+<div>
+    <img src="/assets/size_low.png" style="margin-top: 80px; margin-left: auto; margin-right: auto; display: block; position :relative"/>
+    
+</div>
 
-
-
-
-    <svg width="547" height="349" class="svg_pants" id="svg22" display="none">
+    <div style="margin-top: -340px; margin-left :<%=106-@minus_waist1%>px;">
+        <svg width="270" height="340" id="svg11" display="none" style="margin-left: auto; margin-right: auto; position :relative">
+            <g>
+                <path stroke="black"
+                d="m<%=@StartXpos%>,
+                <%=@StartYpos%>l<%=@Heap_left%>,
+                <%=@waist_height%>l<%=@thigh%>,
+                <%=@length%>l<%=@tail%>,
+                0l<%=@waist_width%>,
+                -<%=@rise%>l<%=@waist_width%>,
+                <%=@rise%>l<%=@tail%>,
+                0l<%=@thigh%>,
+                -<%=@length%>l-<%=@StartXpos%>,
+                -<%=@waist_height%>"
+                stroke-width="3" fill="white" style="opacity :0.5;"/>
+            </g>
+        </svg>
+        </div>
+        
+    
+    <div style="margin-top: -340px; margin-left :<%=106-@minus_waist2%>px;">
+        <svg width="270" height="340" id="svg22" display="none" style="margin-left: auto; margin-right: auto; position :relative">
  <g>
   <path stroke="black"
     d="m<%=@StartXpos%>,
@@ -163,12 +156,13 @@ tail 밑단
     0l<%=@thigh2%>,
     -<%=@length2%>l-<%=@StartXpos%>,
     -<%=@waist_height2%>"
-    stroke-width="5" fill="yellow"/>
+    stroke-width="3" fill="white" style="opacity :0.5;"/>
  </g>
 </svg>
-</div></div>
+    </div>
 
-
+</div>
+</div>
 <!--
 heap 엉덩이
 
@@ -183,7 +177,7 @@ rise 밑위
 tail 밑단
 -->
 <center>
-<table class="table table-striped table-bordered table-hover" style="color:#23bab5;width:80%">
+<table class="table table-striped table-bordered table-hover" style="color:#23bab5;width:60%;margin-top:130px">
         <!-- <caption>전 화면에서 입력한 값을 넣어주고 싶음....밑에 값들을!!! 표에어떻게넣어 ㅠㅠ</caption> -->
         <thead>
             <tr>

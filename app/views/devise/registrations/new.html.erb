@@ -1,3 +1,5 @@
+<br><br>
+
 <center>
 <div class="container">
   <div class="row">
@@ -6,7 +8,7 @@
     <div class="col">
       <div class="box">
 
-      <article role=""  class="text-center">
+      <article role="ohs"  class="text-center">
           <header>
             회원가입
           </header>
@@ -17,32 +19,40 @@
               <form class="signup" action="index.html" method="post">
                 <div class="form-group">
                   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :이메일 %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
                 </div>
                 
                 <div class="form-group">
                    <div class="field">
-    <%= f.label :password %>
+    <%= f.label :비밀번호 %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div></div>
   
   <div class="form-group">
                     <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :비밀번호확인 %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div></div>
-                
-                <% if devise_mapping.rememberable? -%><div class="field"><%= f.check_box :remember_me %><%= f.label :remember_me %></div><% end -%>
-                
-               <div class="actions">
-    <%= f.submit "Sign up" %>
+                <div class="actions">
+    <button type="submit" style="background-color:#23bab5;border:#23bab5"class="btn btn-warning btn1">회원가입</button>
+    
+    <br><a href="/users/sign_in">로그인할래요</a>
   </div>
-<% end %>
-<center>
-<%= render "devise/shared/links" %>
-</center>
+  <!--             <div class="actions">-->
+                 
+  <!--  <%= f.submit "Sign up" %>-->
+  <!--</div>--> </form>
+        </article>
+      </article>
+
+      </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div><% end %>

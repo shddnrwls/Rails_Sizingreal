@@ -1,43 +1,5 @@
-<!--<div class="container">-->
-<!--  <div class="row">-->
-<!--    <div class="col">-->
-<!--    </div>-->
-<!--    <div class="col-2">-->
-<!--      <center>-->
-<!--      <h2>로그인</h2><br>-->
 
-<!--<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>-->
-<!--  <div class="field">-->
-<!--   <h6 style= "text-align: left">아이디</h6>-->
-<!--    <%= f.email_field :email, autofocus: true %>-->
-<!--  </div>-->
-<!--  <br>-->
-<!--  <div class="field">-->
-<!--   <h6 style= "text-align: left">비밀번호</h6>-->
-<!--    <%= f.password_field :password, autocomplete: "off" %>-->
-<!--  </div>-->
-  
-
-<!--  <% if devise_mapping.rememberable? -%>-->
-<!--    <div class="field">-->
-<!--      <%= f.check_box :remember_me %>-->
-<!--      <%= f.label :remember_me %>-->
-<!--    </div>-->
-<!--  <% end -%>-->
-<!--  <br>-->
-<!--  <div class="actions">-->
-<!--    <button type="submit" style="background-color:#23bab5;border:#23bab5"class="btn btn-warning btn1">로그인</button>-->
-<!--  </div>-->
-<!--<% end %>-->
-<!--    </div>-->
-<!--    <div class="col">-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<center>
-<%= render "devise/shared/links" %>
-</center>
+<br><br>
 
 
 <div class="container">
@@ -47,7 +9,7 @@
     <div class="col">
       <div class="box">
 
-      <article role=""  class="text-center">
+      <article role="ohs"  class="text-center">
           <header>
             로그인
           </header>
@@ -57,12 +19,12 @@
               <form class="signup" action="index.html" method="post">
                 <div class="form-group">
                   <div class="field">
-                  <h6 style= "text-align: left">아이디</h6>
+                  <h6 style= "text-align: left"><center>아이디</center></h6>
                   <%= f.email_field :email, autofocus: true %></div>
                 </div>
                 <div class="form-group">
                    <div class="field">
-                <h6 style= "text-align: left">비밀번호</h6><%= f.password_field :password, autocomplete: "off" %></div>
+                <h6 style= "text-align: left"><center>비밀번호</center></h6><%= f.password_field :password, autocomplete: "off" %></div>
                 </div>
                 
                 <% if devise_mapping.rememberable? -%><div class="field"><%= f.check_box :remember_me %><%= f.label :remember_me %></div><% end -%>
@@ -70,6 +32,7 @@
                 <div class="form-group">
                   <div class="actions">
     <button type="submit" style="background-color:#23bab5;border:#23bab5"class="btn btn-warning btn1">로그인</button>
+    <br><a href="/users/sign_up">회원가입할래요</a>
   </div>
                 </div>
               </form>

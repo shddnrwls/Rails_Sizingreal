@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'sizingreal/mypage/:user_id' => 'sizingreal#mypage'
   
+  get 'sizingreal/users/sign_out' => 'sizingreal#main'
+  
   post 'sizingreal/update/:user_id' => 'sizingreal#update'
 
 end

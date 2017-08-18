@@ -1,29 +1,37 @@
+
 <div class="container">
   <div class="row">
     <div class="col">
     </div>
-    <div class="col-5">
-      <center>
-<h2>비밀번호 찾기</h2><br>
+    <div class="col">
+      <div class="box">
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <div class="col-6">
-    <h6 style= "text-align: left">아이디</h6></div>
+      <article role="ohs"  class="text-center">
+          <header>
+            비밀번호를 잊었나요?
+          </header>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <article role="login">
+              <h3 class="text-center"><i class="fa fa-lock"></i>find_password</h3>
+              <form class="signup" action="index.html" method="post">
+                <div class="form-group">
+                  <div class="field">
+    
+    <h6><center>아이디</center></h6>
     <%= f.email_field :email, autofocus: true %>
-   </div>
-  <br>
-  <div class="actions">
+   </div><br>
+                <div class="actions">
     <button type="submit" style="background-color:#23bab5;border:#23bab5"class="btn btn-warning btn1">비밀번호 재설정 메일보내기</button>
+    
   </div>
-<% end %>
+                </div>
+              </form>
+        </article>
+      </article>
+
+      </div>
     </div>
     <div class="col">
     </div>
   </div>
-</div>
-<center>
-<%= render "devise/shared/links" %>
-</center>
+</div><% end %>

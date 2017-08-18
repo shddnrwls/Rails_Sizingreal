@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<script>
+function please(){
+    alert("비밀번호 변경이 완료되었습니다!");
+  
+}
+</script><!DOCTYPE html>
 <html>
 <head>
   <title>MY PAGE</title>
@@ -18,24 +23,23 @@
       <div class="box">
 
       <article role="ohs"  class="text-center">
-           <header>
+          <header>
             비밀번호 변경
           </header>
         <article role="login">
-         
               <h3 class="text-center"><i class="fa fa-lock"></i> Change User Password</h3>
-              <form class="signup" action="index.html" method="post">
+              <form class="signup" action="/sizingreal/update/<%= current_user.id%>" method="post">
                 <div class="form-group">
-                  <input type="password" name="prepw" class="form-control pw" placeholder="현재 비밀번호">
+                 
                 </div>
                 <div class="form-group">
                    <input type="password" name="changepw" class="form-control pw" placeholder="변경 비밀번호">
                 </div>
                 <div class="form-group">
-                   <input type="password" name="pwconfirm" class="form-control pw" placeholder="변경 비밀번호 확인">
+                   
                 </div>
                 <div class="form-group">
-                  <input type="submit" class="btn btn-success"  value="비밀번호 변경" name="pwsubmit">
+                  <input type="submit" class="btn btn-success"  value="비밀번호 변경" name="pwsubmit" onclick="please()">
                 </div>
               </form>
         </article>
@@ -48,6 +52,8 @@
   </div>
 </div>
 
+<div>
+</div>
 
 
 
@@ -66,8 +72,9 @@
                 <header>
                   내 사이즈 변경
                 </header>
+                <form action="/sizingreal/update/<%= current_user.id%>" method="post">
                 <ul class="text-left">
-                  <form action="/sizingreal/update/<%= current_user.id%>" method="post">
+                
                   <li><i class="fa fa-check"></i> 총장<input type="number" name="length" step=".01" class="form-control size" value="<%=current_user.length%>"> </li>
                   <li><i class="fa fa-check"></i> 허리 단면<input type="number" name="waist" step=".01" class="form-control size" value="<%=current_user.waist%>"></li>
                   <li><i class="fa fa-check"></i> 허벅지 단면<input type="number" name="thigh" step=".01" class="form-control size" value="<%=current_user.thigh%>"></li>

@@ -52,6 +52,8 @@ class SizingrealController < ApplicationController
     @diff_rise2 = (@hash_jean_size["rise2"]).to_f / (@hash_my_size["m_rise"]).to_f
     @diff_tail2 = (@hash_jean_size2["tail2"]).to_f / (@hash_my_size["m_tail"]).to_f
 
+    @minus_waist1 = ((@hash_jean_size["waist"]).to_f - (@hash_my_size["m_waist"]).to_f) * 3.0
+    @minus_waist2 = ((@hash_jean_size2["waist2"]).to_f - (@hash_my_size["m_waist"]).to_f) * 3.0
   end
 
   def mypage
@@ -64,6 +66,7 @@ class SizingrealController < ApplicationController
     @user.thigh = params[:thigh]
     @user.rise = params[:rise]
     @user.tail = params[:tail]
+    @user.password = params[:changepw]
     @user.save
     redirect_to "/"
   end

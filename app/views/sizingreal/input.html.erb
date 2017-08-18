@@ -55,8 +55,11 @@ function inputs2(){
 
 </style>
 <body style="font-family:Hanna">
+ 
 <form action="/sizingreal/result" method="get">
+ 
  <br><br>
+
 <center><h1 style="color:#23bab5"><b>사이즈 입력</b></h1>
 <%if user_signed_in?%>
 <p> <a href="/sizingreal/mypage/<%=current_user.id%>"> 내 정보 뷰로 이동 </a> </p><hr style="color:#23bab5">
@@ -65,20 +68,28 @@ function inputs2(){
 <div class="col-md-3"style="color:#23bab5"><b>STEP02</b></div>
 <div class="col-md-3"style="color:#23bab5"><b>STEP03-1</b></div>
 <div class="col-md-3"style="color:#23bab5"><b>STEP03-2</b></div>
+</center> <!-- 센터 닫아줌-->
+
+<div>
+ 
+ 
 
   <!-- 로그인 돼 있으면 자동으로 넣기 해야 함 -->
   <!-- 디바이스 잼의 모델을 수정해서 or 따로 모델을 만들고 디바이스 모델과 연결-->
 <%if user_signed_in?%>
- <center><div class="col-md-3" style="background-color:white;height:530px;border:1px solid #23bab5">
+ <center><div class="col-md-3">
+  <article role="login" style="background-color:white;height:560px;border:1px solid #23bab5;">
   <h3><b style="color:#23bab5">내 사이즈</b></h3><hr><br>
   총장<input type="number" class="form-control"style="width:150px"name="m_length" step=".01" value="<%=current_user.length%>"><br>
   허리 단면<input type="number" class="form-control"style="width:150px"name="m_waist" step=".01" value="<%=current_user.waist%>"><br>
   허벅지 단면<input type="number" class="form-control"style="width:150px"name="m_thigh" step=".01" value="<%=current_user.thigh%>"><br>
   밑위<input type="number" class="form-control"style="width:150px"name="m_rise" step=".01" value="<%=current_user.rise%>"><br>
-  밑단 단면<input type="number" class="form-control"style="width:150px"name="m_tail" step=".01"value="<%=current_user.tail%>"><br></div>
+  밑단 단면<input type="number" class="form-control"style="width:150px"name="m_tail" step=".01"value="<%=current_user.tail%>"><br></article></div>
+</center> <!-- 센터 닫아줌-->
 
   <%else%>
-   <center><div class="col-md-3" style="background-color:white;height:530px;border:1px solid #23bab5;">
+   <center><div class="col-md-3">
+  <article role="login" style="background-color:white;height:560px;border:1px solid #23bab5;">
   <h3><b style="color:#23bab5">내 사이즈</b></h3><hr><br>
   
   총장<br><input type="number" name="m_length" step=".01"class="form-control"style="width:150px"><br>
@@ -86,12 +97,15 @@ function inputs2(){
   허벅지 단면<br><input type="number" name="m_thigh" step=".01"class="form-control"style="width:150px"><br>
   밑위<br><input type="number" name="m_rise" step=".01"class="form-control"style="width:150px"><br>
   밑단 단면<br><input type="number" name="m_tail" step=".01"class="form-control"style="width:150px"><br>
-  </div>
+  </article></div>
+  </center> <!-- 센터 닫아줌-->
+
 <%end%>
 
 
- <center><div class="col-md-3" style="background-color:white;height:530px;border:1px solid #23bab5;">
-  <h3><b style="color:#23bab5">바지 사이즈 입력</b></h3><hr><br>
+ <center><div class="col-md-3">
+  <article role="login" style="background-color:white;height:560px;border:1px solid #23bab5;">
+  <h3><b style="color:#23bab5">바지 사이즈<br>입력</b></h3><hr>
   총장
   <br><input type="number" name="length" step=".01"class="form-control"style="width:150px"><br>
   허리 단면
@@ -102,43 +116,56 @@ function inputs2(){
   <br><input type="number" name="rise" step=".01"class="form-control"style="width:150px"><br>
   밑단 단면
   <br><input type="number" name="tail" step=".01"class="form-control"style="width:150px"><br>
-  
+
 
   <div class="btn-group" role="group" aria-label="...">
   <button type="button" onclick="inputs()" value="첫 바지" class="btn btn-default" style="color:#23bab5">1</button>
   <button type="button" onclick="inputs2()" value="둘 바지" class="btn btn-default"style="color:#23bab5">2</button>
   </div>
 
-   
+   </article>
    </div>
-    <center><div class="col-md-3" style="background-color:white;height:530px;border:1px solid #23bab5;">
-  <h3><b style="color:#23bab5">첫 번째 바지 </b><input type="text" name="first_size" style="width:50px;height:30px"></h3><hr><br>
+   
+   
+   
+    <center><div class="col-md-3">
+  <article role="login" style="background-color:white;height:560px;border:1px solid #23bab5;">
+  <h3><b style="color:#23bab5">첫 번째 바지 </b><input type="text" name="first_size" style="width:50px;height:30px"></h3><hr>
 
   총장<br><input type="text" readonly="readonly"  name="result_length" style="text-align:center;background-color:#eeeeee;width:150px" class="form-control"><br>
   허리 단면<br><input type ="text"  readonly="readonly" name="result_waist" style="text-align:center;background-color:#eeeeee;width:150px"class="form-control"><br>
   허벅지 단면<br><input type ="text" readonly="readonly"  name="result_thigh"style="text-align:center;background-color:#eeeeee;width:150px"class="form-control"><br>
   밑위<br><input type ="text" readonly="readonly"  name="result_rise"style="text-align:center;background-color:#eeeeee;width:150px"class="form-control"><br>
   밑단 단면<br><input type ="text"  readonly="readonly" name="result_tail"style="text-align:center;background-color:#eeeeee;width:150px"class="form-control"><br>
-   </div>
+   </article></div>
    
-   <center><div class="col-md-3" style="background-color:white;height:530px;border:1px solid #23bab5;">
-  <h3><b style="color:#23bab5">두 번째 바지 </b><input type="text" name="second_size" style="width:50px;height:30px"></h3><hr><br>
+   <center><div class="col-md-3">
+  <article role="login" style="background-color:white;height:560px;border:1px solid #23bab5;">
+  <h3><b style="color:#23bab5">두 번째 바지 </b><input type="text" name="second_size" style="width:50px;height:30px"></h3><hr>
   
   총장<br><input type ="text" readonly="readonly" name="result_length2"style="text-align:center;background-color:#eeeeee;width:150px"class="form-control"><br>
   허리 단면<br><input type ="text"  readonly="readonly" name="result_waist2"style="text-align:center;background-color:#eeeeee;width:150px"class="form-control"><br>
   허벅지 단면<br><input type ="text"  readonly="readonly" name="result_thigh2"style="text-align:center;background-color:#eeeeee;width:150px"class="form-control"><br>
   밑위<br><input type ="text"  readonly="readonly" name="result_rise2" style="text-align:center;background-color:#eeeeee;width:150px"class="form-control"><br>
   밑단 단면<br><input type ="text"  readonly="readonly" name="result_tail2"style="text-align:center;background-color:#eeeeee;width:150px"class="form-control"><br>
-   </div>
-
-   
-</div><center><br>*바지 옆 빈칸은 S,M,L등 자신만의 표시가 가능합니다.<br><br>
-<center>
- <input type="submit" value="결과 보기" class="btn btn-success btn-block" style="background:#23bab5; width:150px; padding: 10px 15px; border: 2px solid #23bab5; font-size:15px">
-<br>
-</center>
+   </article></div>
 </div>
 
-</form>
+ 
+<!--</div>-->
 
+
+
+
+
+
+<center><br>*바지 옆 빈칸은 S,M,L등 자신만의 표시가 가능합니다.<br><br>
+</center> <!-- 센터 닫아줌-->
+
+<center>
+ <input type="submit" value="결과 보기" class="btn btn-success btn-block" style="background:#23bab5; width:150px; padding: 10px 15px; border: 2px solid #23bab5; font-size:15px">
+</center>
+<br>
+<!--</div>-->
+</form>
 </body>

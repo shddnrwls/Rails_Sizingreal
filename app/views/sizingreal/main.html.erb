@@ -1,10 +1,17 @@
+<script>
+function please(){
+    alert("회원가입하면 매번 정보 등록하지 않아도 돼요ㅜ")
+}
+</script>
+
+
 <div id="wrap">
       <div class="container">
         <div class="row">
           <div class="col">
           </div>
-          <div class="col-6"><br><br>
-            <img src="assets/size.png" style="width:100%;height:auto"></img><br>
+          <div class="col-6" style="align:center"><br><br>
+            <img src="assets/size.png" style="width:100%;height:auto"></img>
         
 <center>
 
@@ -17,10 +24,12 @@
             </div>
         </div>
 
-</center><br><br>
-<center> <a href="/sizingreal/input">입력 뷰로 이동 </a></center>
+</center>
+<center> <a href="/sizingreal/input">입력 뷰로 이동 </a></center><br>
 
-          </div>
+
+          </div>  
+          
 <%else%>
         <div class="row">
             <div class="col-6">
@@ -31,8 +40,11 @@
             </div>
         </div>
 
-</center><br><br>
-<center> <a href="/sizingreal/input">로그인 없이 입력 뷰로 이동 </a>(매번 사이즈 입력이 필요합니다ㅠ)</center>
+    </center><br><br>
+    <center> <a href="/sizingreal/input" onclick="please()">로그인 없이 입력 뷰로 이동 </a><br>(매번 사이즈 입력이 필요합니다ㅠ)</center>
+
+
+<!--ddddddddd-->
 
           </div>
           <%end%>
@@ -40,7 +52,7 @@
           </div>
         </div>
       </div>
-    </div>
+  
 
 
 <!-- NAV 바에 있어서 주석 처리
