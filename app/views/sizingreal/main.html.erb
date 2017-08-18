@@ -4,7 +4,7 @@ function please(){
 }
 
 </script>
-<input type="button" onclick="please()" value="Click-2-Alert">
+<!-- <input type="button" onclick="please()" value="Click-2-Alert"> -->
 
 
 <div id="wrap">
@@ -14,10 +14,9 @@ function please(){
           </div>
           <div class="col-6" style="align:center"><br><br>
             <img src="assets/size.png" style="width:100%;height:auto"></img>
-        
 <center>
-
 <%if user_signed_in?%>
+<center>
 <div class="row">
             <div class="col-6">
                 
@@ -27,13 +26,15 @@ function please(){
         </div>
 
 </center>
+
 <br><br>
-<center><h3> <a href="/sizingreal/input"> 사이즈 입력하기 </a></h3></center><br>
+<center><h3 class="sizebox"> <a href="/sizingreal/input"> 사이즈 입력하기 </a></h3></center><br>
+</div> 
 
-
-          </div>  
           
+</center>          
 <%else%>
+<center>
         <div class="row">
             <div class="col-6">
                 <button type="button" style="background-color:#23bab5;border:#23bab5"class="btn btn-warning btn1" onclick="location.href='https://sizing-real01-ukjin.c9users.io/users/sign_up'">회원가입</button>
