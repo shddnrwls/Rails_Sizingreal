@@ -53,9 +53,9 @@ group :development do
 
 end
 group :production do
-  gem 'mysql2'
-  gem 'pg'
-  gem 'rails_12factor'
+  gem 'mysql2', :group => :development
+  gem 'pg', :group => :production
+  gem 'rails_12factor', group: :production
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

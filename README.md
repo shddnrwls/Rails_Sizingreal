@@ -1,24 +1,15 @@
-# README
+# 프로젝트 소개
+사이즈실화냐
+사용자가 자신의 신체사이즈를 입력하고 입어보고싶은 옷사이즈를 입력해 비율에 맞는 핏을본다
+## 팀원
+노욱진 - controller,aws,mailgun
+이혜민 - html,css
+박소희 - html,css
+오혜성 - controller,html,css
+김혜린 - html,css
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

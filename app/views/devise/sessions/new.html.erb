@@ -1,7 +1,7 @@
 
 <br><br>
 
-
+<center>
 <div class="container">
   <div class="row">
     <div class="col">
@@ -14,6 +14,7 @@
             로그인
           </header>
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          
         <article role="login">
               <h3 class="text-center"><i class="fa fa-lock"></i>Log In</h3>
               <form class="signup" action="index.html" method="post">
@@ -32,13 +33,12 @@
                 <div class="form-group">
                   <div class="actions">
     <button type="submit" style="background-color:#23bab5;border:#23bab5"class="btn btn-warning btn1">로그인</button>
-    <br><a href="/users/sign_up">회원가입할래요</a>
+    <a href="/users/sign_up">회원가입할래요</a>
   </div>
                 </div>
               </form>
         </article>
       </article>
-
       </div>
     </div>
     <div class="col">
